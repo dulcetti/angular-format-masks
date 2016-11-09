@@ -1,0 +1,40 @@
+{
+  "name": "format-masks",
+  "version": "1.0.0",
+  "description": "Format your input masks inside tags HTML",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dulcetti/format-masks.git"
+  },
+  "keywords": [
+    "masks",
+    "angular"
+  ],
+  "author": "Bruno Dulcetti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dulcetti/format-masks/issues"
+  },
+  "homepage": "https://github.com/dulcetti/format-masks#readme",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "browser-sync-spa": "^1.0.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-if": "^2.0.1",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-uglify": "^1.5.4",
+    "gulp-useref": "^3.1.0",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-spec-reporter": "0.0.26",
+    "karma-htmlfile-reporter": "^0.3.4"
+  }
+}
