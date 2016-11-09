@@ -19,4 +19,13 @@ describe('Format Masks Component', function() {
     it('Controller of component should to be init', function() {
         expect(controller).toBeDefined();
     });
+    
+    it('Mask value should to be defined', function() {
+        expect(value).toBeDefined();
+    });
+    
+    it('Mask value should not to be null', function() {
+        expect(value).not.toBeNull();
+        expect(value).not.toEqual('');
+    });
 });
