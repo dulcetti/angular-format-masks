@@ -28,4 +28,13 @@ describe('Format Masks Component', function() {
         expect(value).not.toBeNull();
         expect(value).not.toEqual('');
     });
+    
+    it('Mask type should to be defined', function() {
+        expect(type).toBeDefined();
+    });
+    
+    it('Mask type should be have a type', function() {
+        expect(type).not.toBeNull();
+        expect(type).not.toEqual('');
+    });
 });
