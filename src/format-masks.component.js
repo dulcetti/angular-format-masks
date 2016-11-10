@@ -36,6 +36,9 @@
                         break;
 
                     case 'cep':
+                        var first = value.substr(0, 5);
+                        var second = value.substr(5, 3);
+                        self.result = first + '-' + second;
                         break;
 
                     case 'phone':
