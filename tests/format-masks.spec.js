@@ -2,7 +2,17 @@ describe('Format Masks Component', function() {
     beforeEach(module('format.masks'));
 
     var component;
+    var componentCpf;
+    var componentCnpj;
+    var componentCep;
+    var componentPhone;
+    
     var controller;
+    var controllerCpf;
+    var controllerCnpj;
+    var controllerCep;
+    var controllerPhone;
+    
     var type;
     var value;
     var scope;
@@ -15,6 +25,22 @@ describe('Format Masks Component', function() {
         controller = component.controller('formatMasks');
         type = controller.maskType;
         value = controller.maskValue;
+
+        componentCpf = angular.element('<format-masks mask-value="11111111111" mask-type="cpf"></format-masks>');
+        componentCpf = $compile(componentCpf)(scope);
+        controllerCpf = componentCpf.controller('formatMasks');
+
+        componentCnpj = angular.element('<format-masks mask-value="11111111111" mask-type="cnpj"></format-masks>');
+        componentCnpj = $compile(componentCnpj)(scope);
+        controllerCnpj = componentCnpj.controller('formatMasks');
+
+        componentCep = angular.element('<format-masks mask-value="11111111111" mask-type="cep"></format-masks>');
+        componentCep = $compile(componentCep)(scope);
+        controllerCep = componentCep.controller('formatMasks');
+
+        componentPhone = angular.element('<format-masks mask-value="11111111111" mask-type="phone"></format-masks>');
+        componentPhone = $compile(componentPhone)(scope);
+        controllerPhone = componentPhone.controller('formatMasks');
     }));
 
     it('Controller of component should to be init', function() {
@@ -56,8 +82,12 @@ describe('Format Masks Component', function() {
     });
 
     describe('CPF type', function() {
+        it('Component with correct type', function() {
+            expect(controllerCpf.maskType).toEqual('cpf');
+        });
+
         it('CPF must have 11 chars', function() {
-            expect(value.length).toEqual(11);
+            expect(controllerCpf.maskValue.length).toEqual(11);
         });
     });
 });
