@@ -34,11 +34,11 @@ describe('Format Masks Component', function() {
         componentCnpj = $compile(componentCnpj)(scope);
         controllerCnpj = componentCnpj.controller('formatMasks');
 
-        componentCep = angular.element('<format-masks mask-value="11111111111" mask-type="cep"></format-masks>');
+        componentCep = angular.element('<format-masks mask-value="11111111" mask-type="cep"></format-masks>');
         componentCep = $compile(componentCep)(scope);
         controllerCep = componentCep.controller('formatMasks');
 
-        componentPhone = angular.element('<format-masks mask-value="11111111111" mask-type="phone"></format-masks>');
+        componentPhone = angular.element('<format-masks mask-value="111111111" mask-type="phone"></format-masks>');
         componentPhone = $compile(componentPhone)(scope);
         controllerPhone = componentPhone.controller('formatMasks');
     }));
@@ -86,11 +86,11 @@ describe('Format Masks Component', function() {
             expect(controllerCpf.maskType).toEqual('cpf');
         });
 
-        it('CPF must have 11 chars', function() {
+        it('CPF must to be have 11 chars', function() {
             expect(controllerCpf.maskValue.length).toEqual(11);
         });
         
-        it('Result of CPF mask is correct', function() {
+        it('Result of CPF mask must to be correct', function() {
             expect(controllerCpf.result).toEqual('111.111.111-11');
             expect(controllerCpf.result.length).toEqual(14);
         });
@@ -101,14 +101,28 @@ describe('Format Masks Component', function() {
             expect(controllerCnpj.maskType).toEqual('cnpj');
         });
 
-        it('CNPJ must have 14 chars', function() {
+        it('CNPJ must to be have 14 chars', function() {
             expect(controllerCnpj.maskValue.length).toEqual(14);
         });
 
-        it('Result of CNPJ mask is correct', function() {
+        it('Result of CNPJ mask must to be correct', function() {
             expect(controllerCnpj.result).toEqual('11.111.111/0001-11');
             expect(controllerCnpj.result.length).toEqual(18);
         });
     });
     
+    describe('CEP type', function() {
+        it('Component with correct type', function() {
+            expect(controllerCep.maskType).toEqual('cep');
+        });
+
+        it('CEP must to be have 8 chars', function() {
+            expect(controllerCep.maskValue.length).toEqual(8);
+        });
+
+        it('Result of CEP mask must to be correct', function() {
+            expect(controllerCep.result).toEqual('11111-111');
+            expect(controllerCep.result.length).toEqual(9);
+        });
+    });
 });
