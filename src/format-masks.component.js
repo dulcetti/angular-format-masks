@@ -7,7 +7,28 @@
 
     function formatMasksComponent() {
         function formatMasksController() {
-            this.types = ['cpf', 'cnpj', 'cep', 'phone'];
+            var self = this;
+
+            self.result = '';
+            self.types = ['cpf', 'cnpj', 'cep', 'phone'];
+
+            if(self.types.indexOf(self.maskType) == -1) {
+                console.error('Invalid type');
+            }
+
+            function formatResult(type, value) {
+                switch (type) {
+                    case 'cpf':
+                        var first = value.substr(0, 3);
+                        var second = value.substr(3, 3);
+                        var third = value.substr(6, 3);
+                        var fourth = value.substr(9, 2);
+                        self.result = first + '.' + second + '.' + third + '-' + fourth;
+                        break;
+                }
+            };
+
+            formatResult(self.maskType, self.maskValue);
         };
 
         return {
@@ -17,7 +38,7 @@
             },
             controller: formatMasksController,
             controllerAs: '$ctrl',
-            template: '<strong>{{ $ctrl.value }}</strong>'
+            template: '{{ $ctrl.result }}'
         };
     };
 } ());
