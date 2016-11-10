@@ -34,6 +34,12 @@
                         var fifth = value.substr(12, 2);
                         self.result = first + '.' + second + '.' + third + '/' + fourth + '-' + fifth;
                         break;
+
+                    case 'cep':
+                        break;
+
+                    case 'phone':
+                        break;
                 }
             };
 
