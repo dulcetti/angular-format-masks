@@ -6,6 +6,7 @@ describe('Format Masks Component', function() {
     var type;
     var value;
     var scope;
+    var maskTypes = ['cpf', 'cnpj', 'cep', 'phone'];
 
     beforeEach(inject(function($compile, $rootScope) {
         scope = $rootScope.$new();
@@ -48,7 +49,15 @@ describe('Format Masks Component', function() {
         it('Mask type as valid', function() {
             expect(controller.types).toContain(type);
         });
+        
+        it('Array of mask types is update', function() {
+            expect(controller.types).toEqual(maskTypes);
+        }); 
     });
 
-    
+    describe('CPF type', function() {
+        it('CPF must have 11 chars', function() {
+            expect(value.length).toEqual(11);
+        });
+    });
 });
