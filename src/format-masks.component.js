@@ -25,6 +25,15 @@
                         var fourth = value.substr(9, 2);
                         self.result = first + '.' + second + '.' + third + '-' + fourth;
                         break;
+
+                    case 'cnpj':
+                        var first = value.substr(0, 2);
+                        var second = value.substr(2, 3);
+                        var third = value.substr(5, 3);
+                        var fourth = value.substr(8, 4);
+                        var fifth = value.substr(12, 2);
+                        self.result = first + '.' + second + '.' + third + '/' + fourth + '-' + fifth;
+                        break;
                 }
             };
 
