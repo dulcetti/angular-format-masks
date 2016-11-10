@@ -30,7 +30,7 @@ describe('Format Masks Component', function() {
         componentCpf = $compile(componentCpf)(scope);
         controllerCpf = componentCpf.controller('formatMasks');
 
-        componentCnpj = angular.element('<format-masks mask-value="11111111111" mask-type="cnpj"></format-masks>');
+        componentCnpj = angular.element('<format-masks mask-value="11111111000111" mask-type="cnpj"></format-masks>');
         componentCnpj = $compile(componentCnpj)(scope);
         controllerCnpj = componentCnpj.controller('formatMasks');
 
@@ -89,5 +89,26 @@ describe('Format Masks Component', function() {
         it('CPF must have 11 chars', function() {
             expect(controllerCpf.maskValue.length).toEqual(11);
         });
+        
+        it('Result of CPF mask is correct', function() {
+            expect(controllerCpf.result).toEqual('111.111.111-11');
+            expect(controllerCpf.result.length).toEqual(14);
+        });
     });
+    
+    describe('CNPJ type', function() {
+        it('Component with correct type', function() {
+            expect(controllerCnpj.maskType).toEqual('cnpj');
+        });
+
+        it('CNPJ must have 14 chars', function() {
+            expect(controllerCnpj.maskValue.length).toEqual(14);
+        });
+
+        it('Result of CNPJ mask is correct', function() {
+            expect(controllerCnpj.result).toEqual('11.111.111/0001-11');
+            expect(controllerCnpj.result.length).toEqual(18);
+        });
+    });
+    
 });
