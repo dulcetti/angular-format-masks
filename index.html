@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fromat mask</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <base href="/">
+    <link rel="shortcut icon" href="/imgs/favicon.png">
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/src/format-masks.component.js"></script>
+    <script>
+        angular
+            .module('masks', ['format.masks']);
+    </script>
+</head>
+<body ng-app="masks">
+    <h1>Format masks</h1>
+    
+    <h2>CPF Mask</h2>
+    <format-masks mask-value="11111111111" mask-type="cpf"></format-masks>
+
+    <h2>CNPJ Mask</h2>
+    <format-masks mask-value="11111111000111" mask-type="cnpj"></format-masks>
+
+    <h2>CEP Mask</h2>
+    <format-masks mask-value="11111111" mask-type="cep"></format-masks>
+
+    <h2>Phone Mask with 8 digits</h2>
+    <format-masks mask-value="99999999" mask-type="phone"></format-masks>
+
+    <h2>Phone Mask with 9 digits</h2>
+    <format-masks mask-value="999999999" mask-type="phone"></format-masks>
+</body>
+</html>
