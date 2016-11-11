@@ -42,6 +42,14 @@
                         break;
 
                     case 'phone':
+                        if(value.length == 8) {
+                            var first = value.substr(0, 4);
+                            var second = value.substr(4, 4);
+                        } else {
+                            var first = value.substr(0, 5);
+                            var second = value.substr(5, 4);
+                        }
+                        self.result = first + '-' + second;
                         break;
                 }
             };
