@@ -10,7 +10,7 @@
             var self = this;
 
             self.result = '';
-            self.types = ['cpf', 'cnpj', 'cep', 'phone'];
+            self.types = ['cpf', 'cnpj', 'cep', 'brazilian-phone'];
 
             if(self.types.indexOf(self.maskType) == -1) {
                 console.error('Invalid type');
@@ -41,7 +41,7 @@
                         self.result = first + '-' + second;
                         break;
 
-                    case 'phone':
+                    case 'brazilian-phone':
                         if(value.length == 8) {
                             var first = value.substr(0, 4);
                             var second = value.substr(4, 4);

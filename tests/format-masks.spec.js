@@ -6,7 +6,7 @@ describe('Format Masks Component', function() {
     var scope;
     var type;
     var value;
-    var maskTypes = ['cpf', 'cnpj', 'cep', 'phone'];
+    var maskTypes = ['cpf', 'cnpj', 'cep', 'brazilian-phone'];
 
     describe('Init component', function() {
         beforeEach(inject(function($compile, $rootScope) {
@@ -135,7 +135,7 @@ describe('Format Masks Component', function() {
     describe('Phone type', function() {
         beforeEach(inject(function($compile, $rootScope) {
             scope = $rootScope.$new();
-            component = angular.element('<format-masks mask-value="11111111" mask-type="phone"></format-masks>');
+            component = angular.element('<format-masks mask-value="11111111" mask-type="brazilian-phone"></format-masks>');
             component = $compile(component)(scope);
             controller = component.controller('formatMasks');
         }));
@@ -154,7 +154,7 @@ describe('Format Masks Component', function() {
     describe('Phone type with 8 digits', function() {
         beforeEach(inject(function($compile, $rootScope) {
             scope = $rootScope.$new();
-            component = angular.element('<format-masks mask-value="11111111" mask-type="phone"></format-masks>');
+            component = angular.element('<format-masks mask-value="11111111" mask-type="brazilian-phone"></format-masks>');
             component = $compile(component)(scope);
             controller = component.controller('formatMasks');
         }));
@@ -171,7 +171,7 @@ describe('Format Masks Component', function() {
     describe('Phone type with 9 digits', function() {
         beforeEach(inject(function($compile, $rootScope) {
             scope = $rootScope.$new();
-            component = angular.element('<format-masks mask-value="111111111" mask-type="phone"></format-masks>');
+            component = angular.element('<format-masks mask-value="111111111" mask-type="brazilian-phone"></format-masks>');
             component = $compile(component)(scope);
             controller = component.controller('formatMasks');
         }));
