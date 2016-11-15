@@ -15,21 +15,21 @@ After this, the component will installed on folder node_modules/
 
 ## Configuration
 
-Agora você precisa colocar o JS responsável por chamar o componente:
+Now you need put the JS file responsible to call the component:
 
 ```html
 <script src="/node_modules/format-masks/dist/faq.component.js"></script>
 ```
 
-Agora adicione o componente no módulo Angular do seu projeto:
+Add the component at AngularJS module of your project:
 
 ```javascript
 angular.module('application', ['format.masks']);
 ```
 
-## Aplicando no template
+## Apply on template
 
-Agora é adicionar a tag na sua view:
+Now is add the tag on your view:
 
 ```html
 <format-masks></format-masks>
@@ -37,12 +37,12 @@ Agora é adicionar a tag na sua view:
 
 ### Masks options
 
-Você pode adicionar as seguintes máscaras:
+You need add one of the follows mask types:
 
 * CPF
 * CNPJ
 * CEP
-* Telefone
+* Brazilian Phone
 
 O componente possui um atributo **OBRIGATÓRIO** chamado mask-type, que você passa o tipo de máscara que você quer que o componente transforme:
 
