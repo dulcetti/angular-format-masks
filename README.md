@@ -59,20 +59,20 @@ The types:
 
 ### Values
 
-Depois do tipo você precisa passar o valor da máscara:
+After type you need pass the value of mask:
 
 ```html
 <format-masks maskt-type="cpf" mask-value="11111111111"></format-masks>
 ```
 
-Os valores só aceitam números e com seus respectivos valores máximos:
+The values only accepts numbers and with your respectives maxlengths:
 
-* cpf - 11 caracteres
-* cnpj - 14 caracteres
-* cep - 8 caracteres
-* brazilian-phone - 8 ou 9 caracteres
+* cpf - 11 chars
+* cnpj - 14 chars
+* cep - 8 chars
+* brazilian-phone - 8 or 9 chars
 
-Feito isso, sua string será formata com a máscara:
+After this, your string will format with the mask selected:
 
 ```html
 111.111.111-11
