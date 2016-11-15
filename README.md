@@ -80,4 +80,6 @@ After this, your string will format with the mask selected:
 
 ## That's all folks
 
-Qualquer dúvida, melhoria, sugestão, é só entrar em contato.
+Any doubt, improvement or suggestion, contact me.
+
+Cheers ;)
