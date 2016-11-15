@@ -5,7 +5,7 @@ The masks generally only work on HTML inputs. This component serve to format str
 
 ## Instalation
 
-Rode o comando npm install para executar a instalação do pacote:
+Run the `npm install` command to execute the package instalation:
 
 ```
 npm install format-masks
