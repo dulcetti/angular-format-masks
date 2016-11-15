@@ -11,7 +11,7 @@ Run the `npm install` command to execute the package instalation:
 npm install format-masks
 ```
 
-Feito isso o componente ficará instalado no diretório node_modules/
+After this, the component will installed on folder node_modules/
 
 ## Configuration
 
