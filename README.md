@@ -1,9 +1,9 @@
 # format-masks
-Este é um componente Angular que serve para formatar máscaras de CPF, CNPJ, CEP e Telefones brasileiros.
+This is a AngularJS Component to format masks of CPF, CNPJ, CEP and brazilian phones.
 
-As máscaras só funcionam em inputs HTML. Esse componente serve para formatar strings que vêm de uma API e printar no HTML de forma correta.
+The masks generally only work on HTML inputs. This component serve to format string of one external API and print on HTML in correct format.
 
-## Instalação
+## Instalation
 
 Rode o comando npm install para executar a instalação do pacote:
 
@@ -13,7 +13,7 @@ npm install format-masks
 
 Feito isso o componente ficará instalado no diretório node_modules/
 
-## Configuração
+## Configuration
 
 Agora você precisa colocar o JS responsável por chamar o componente:
 
@@ -35,7 +35,7 @@ Agora é adicionar a tag na sua view:
 <format-masks></format-masks>
 ```
 
-### Opções de máscaras
+### Masks options
 
 Você pode adicionar as seguintes máscaras:
 
@@ -57,7 +57,7 @@ Os tipos são:
 * cep
 * brazilian-phone
 
-### Valores
+### Values
 
 Depois do tipo você precisa passar o valor da máscara:
 
@@ -78,6 +78,6 @@ Feito isso, sua string será formata com a máscara:
 111.111.111-11
 ```
 
-## Finalizando
+## That's all folks
 
 Qualquer dúvida, melhoria, sugestão, é só entrar em contato.
