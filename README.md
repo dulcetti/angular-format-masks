@@ -44,13 +44,13 @@ You need add one of the follows mask types:
 * CEP
 * Brazilian Phone
 
-O componente possui um atributo **OBRIGATÓRIO** chamado mask-type, que você passa o tipo de máscara que você quer que o componente transforme:
+The component have a **REQUIRED** attribute calls mask-type, you pass the mask type you need the component transform on the value:
 
 ```html
 <format-masks maskt-type="cpf"></format-masks>
 ```
 
-Os tipos são:
+The types:
 
 * cpf
 * cnpj
