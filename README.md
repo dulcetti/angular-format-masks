@@ -1,83 +1,85 @@
 # format-masks
-Este é um componente Angular que serve para formatar máscaras de CPF, CNPJ, CEP e Telefones brasileiros.
+This is a AngularJS Component to format masks of CPF, CNPJ, CEP and brazilian phones.
 
-As máscaras só funcionam em inputs HTML. Esse componente serve para formatar strings que vêm de uma API e printar no HTML de forma correta.
+The masks generally only work on HTML inputs. This component serve to format string of one external API and print on HTML in correct format.
 
-## Instalação
+## Instalation
 
-Rode o comando npm install para executar a instalação do pacote:
+Run the `npm install` command to execute the package instalation:
 
 ```
 npm install format-masks
 ```
 
-Feito isso o componente ficará instalado no diretório node_modules/
+After this, the component will installed on folder node_modules/
 
-## Configuração
+## Configuration
 
-Agora você precisa colocar o JS responsável por chamar o componente:
+Now you need put the JS file responsible to call the component:
 
 ```html
 <script src="/node_modules/format-masks/dist/faq.component.js"></script>
 ```
 
-Agora adicione o componente no módulo Angular do seu projeto:
+Add the component at AngularJS module of your project:
 
 ```javascript
 angular.module('application', ['format.masks']);
 ```
 
-## Aplicando no template
+## Apply on template
 
-Agora é adicionar a tag na sua view:
+Now is add the tag on your view:
 
 ```html
 <format-masks></format-masks>
 ```
 
-### Opções de máscaras
+### Masks options
 
-Você pode adicionar as seguintes máscaras:
+You need add one of the follows mask types:
 
 * CPF
 * CNPJ
 * CEP
-* Telefone
+* Brazilian Phone
 
-O componente possui um atributo **OBRIGATÓRIO** chamado mask-type, que você passa o tipo de máscara que você quer que o componente transforme:
+The component have a **REQUIRED** attribute calls mask-type, you pass the mask type you need the component transform on the value:
 
 ```html
 <format-masks maskt-type="cpf"></format-masks>
 ```
 
-Os tipos são:
+The types:
 
 * cpf
 * cnpj
 * cep
 * brazilian-phone
 
-### Valores
+### Values
 
-Depois do tipo você precisa passar o valor da máscara:
+After type you need pass the value of mask:
 
 ```html
 <format-masks maskt-type="cpf" mask-value="11111111111"></format-masks>
 ```
 
-Os valores só aceitam números e com seus respectivos valores máximos:
+The values only accepts numbers and with your respectives maxlengths:
 
-* cpf - 11 caracteres
-* cnpj - 14 caracteres
-* cep - 8 caracteres
-* brazilian-phone - 8 ou 9 caracteres
+* cpf - 11 chars
+* cnpj - 14 chars
+* cep - 8 chars
+* brazilian-phone - 8 or 9 chars
 
-Feito isso, sua string será formata com a máscara:
+After this, your string will format with the mask selected:
 
 ```html
 111.111.111-11
 ```
 
-## Finalizando
+## That's all folks
 
-Qualquer dúvida, melhoria, sugestão, é só entrar em contato.
+Any doubt, improvement or suggestion, contact me.
+
+Cheers ;)
