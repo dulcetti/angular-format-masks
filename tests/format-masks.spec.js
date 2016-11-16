@@ -141,7 +141,7 @@ describe('Format Masks Component', function() {
         }));
 
         it('Component with correct type', function() {
-            expect(controller.maskType).toEqual('phone');
+            expect(controller.maskType).toEqual('brazilian-phone');
         });
         
         it('Phone must to be have only numbers', function() {
