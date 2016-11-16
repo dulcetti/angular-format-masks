@@ -1,0 +1,15 @@
+{
+  "name": "format-masks",
+  "version": "1.0.0",
+  "devDependencies": {
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.7",
+    "angular-touch": "^1.5.7",
+    "angular-ui-router": "^0.3.1",
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.4",
+    "node-sass": "^3.8.0",
+    "angular-sanitize": "^1.5.8",
+    "angular-mocks": "^1.5.8"
+  }
+}
