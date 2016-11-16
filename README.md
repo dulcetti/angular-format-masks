@@ -18,7 +18,7 @@ After this, the component will installed on folder node_modules/
 Now you need put the JS file responsible to call the component:
 
 ```html
-<script src="/node_modules/format-masks/dist/faq.component.js"></script>
+<script src="/node_modules/format-masks/dist/format-masks.component.js"></script>
 ```
 
 Add the component at AngularJS module of your project:

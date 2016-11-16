@@ -18,7 +18,7 @@ Feito isso o componente ficará instalado no diretório node_modules/
 Agora você precisa colocar o JS responsável por chamar o componente:
 
 ```html
-<script src="/node_modules/format-masks/dist/faq.component.js"></script>
+<script src="/node_modules/format-masks/dist/format-masks.component.js"></script>
 ```
 
 Agora adicione o componente no módulo Angular do seu projeto:
