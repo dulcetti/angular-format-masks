@@ -1,5 +1,5 @@
 {
-  "name": "format-masks",
+  "name": "angular-format-masks",
   "version": "1.0.0",
   "devDependencies": {
     "angular": "^1.5.8",

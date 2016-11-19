@@ -4,6 +4,8 @@ var gulp = require('gulp');
 var concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     ngAnnotate = require('gulp-ng-annotate'),
+    browserSync = require('browser-sync').create(),
+    spa         = require("browser-sync-spa"),
 	gulpif = require('gulp-if');
 
 // Concatenando JS
@@ -21,6 +23,26 @@ gulp.task('minify', function () {
         .pipe(gulpif('*.js', uglify()))
         .pipe(gulp.dest('dist/')
     );
+});
+
+// Static Server + watching sass/html files
+gulp.task('serve', function() {
+    browserSync.use(
+        spa({
+            selector: "[masks]",
+            history: {
+                index: '/index.html'
+            }
+        })
+    );
+    
+    browserSync.init({
+        server: {
+            baseDir: './'
+        }
+    });
+
+    gulp.watch("./**/*.html").on('change', browserSync.reload);
 });
 
 gulp.task('default', ['concat', 'minify']);
