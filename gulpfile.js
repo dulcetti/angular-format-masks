@@ -23,4 +23,24 @@ gulp.task('minify', function () {
     );
 });
 
+// Static Server + watching sass/html files
+gulp.task('serve', function() {
+    browserSync.use(
+        spa({
+            selector: "[masks]",
+            history: {
+                index: '/index.html'
+            }
+        })
+    );
+    
+    browserSync.init({
+        server: {
+            baseDir: './'
+        }
+    });
+
+    gulp.watch("./**/*.html").on('change', browserSync.reload);
+});
+
 gulp.task('default', ['concat', 'minify']);
