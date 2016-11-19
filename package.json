@@ -1,5 +1,5 @@
 {
-  "name": "format-masks",
+  "name": "angular-format-masks",
   "version": "1.0.0",
   "description": "Format your input masks inside tags HTML",
   "main": "index.js",
