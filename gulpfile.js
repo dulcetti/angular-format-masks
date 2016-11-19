@@ -4,6 +4,8 @@ var gulp = require('gulp');
 var concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     ngAnnotate = require('gulp-ng-annotate'),
+    browserSync = require('browser-sync').create(),
+    spa         = require("browser-sync-spa"),
 	gulpif = require('gulp-if');
 
 // Concatenando JS
