@@ -10,7 +10,7 @@
             var self = this;
 
             self.result = '';
-            self.types = ['cpf', 'cnpj', 'cep', 'brazilian-phone'];
+            self.types = ['cpf', 'cnpj', 'cep', 'brazilian-phone', 'date-ddmmyyyy'];
 
             if(self.types.indexOf(self.maskType) == -1) {
                 console.error('Invalid type');

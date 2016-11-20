@@ -6,7 +6,7 @@ describe('Format Masks Component', function() {
     var scope;
     var type;
     var value;
-    var maskTypes = ['cpf', 'cnpj', 'cep', 'brazilian-phone'];
+    var maskTypes = ['cpf', 'cnpj', 'cep', 'brazilian-phone', 'date-ddmmyyyy'];
 
     describe('Init component', function() {
         beforeEach(inject(function($compile, $rootScope) {
@@ -185,4 +185,19 @@ describe('Format Masks Component', function() {
             expect(controller.result.length).toEqual(10);
         });
     });
+
+    describe('Date format 01/01/1900', function() {
+        beforeEach(inject(function($compile, $rootScope) {
+            scope = $rootScope.$new();
+            component = angular.element('<format-masks mask-value="11111111" mask-type="date-ddmmyyyy"></format-masks>');
+            component = $compile(component)(scope);
+            controller = component.controller('formatMasks');
+        }));
+        
+        it('Date must to be have 8 numbers', function() {
+            expect(controller.maskValue.length).toEqual(8);
+        });
+            
+    });
+        
 });
