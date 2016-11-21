@@ -6,7 +6,7 @@ describe('Format Masks Component', function() {
     var scope;
     var type;
     var value;
-    var maskTypes = ['cpf', 'cnpj', 'cep', 'brazilian-phone'];
+    var maskTypes = ['cpf', 'cnpj', 'cep', 'brazilian-phone', 'date-ddmmyyyy'];
 
     describe('Init component', function() {
         beforeEach(inject(function($compile, $rootScope) {
@@ -145,7 +145,7 @@ describe('Format Masks Component', function() {
         });
         
         it('Phone must to be have only numbers', function() {
-            phone = parseInt(controller.maskValue);
+            var phone = parseInt(controller.maskValue);
             expect(phone).toEqual(jasmine.any(Number));
             expect(phone).not.toEqual(NaN);
         });
@@ -182,6 +182,33 @@ describe('Format Masks Component', function() {
 
         it('Result of Phone mask must to be correct', function() {
             expect(controller.result).toEqual('11111-1111');
+            expect(controller.result.length).toEqual(10);
+        });
+    });
+
+    describe('Date format dd/mm/yyyy', function() {
+        beforeEach(inject(function($compile, $rootScope) {
+            scope = $rootScope.$new();
+            component = angular.element('<format-masks mask-value="01011900" mask-type="date-ddmmyyyy"></format-masks>');
+            component = $compile(component)(scope);
+            controller = component.controller('formatMasks');
+        }));
+
+        it('Component with correct type', function() {
+            expect(controller.maskType).toEqual('date-ddmmyyyy');
+        });
+        
+        it('Date must to be have only numbers', function() {
+            var date = controller.maskValue;
+            expect(date).toMatch('[0-9]{8}');
+        });
+        
+        it('Date must to be have 8 numbers', function() {
+            expect(controller.maskValue.length).toEqual(8);
+        });
+
+        it('Result of Date mask must to be correct', function() {
+            expect(controller.result).toEqual('01/01/1900');
             expect(controller.result.length).toEqual(10);
         });
     });
