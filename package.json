@@ -1,6 +1,6 @@
 {
   "name": "angular-format-masks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Format your input masks inside tags HTML",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dulcetti/format-masks.git"
+    "url": "git+https://github.com/dulcetti/angular-format-masks.git"
   },
   "keywords": [
     "masks",
@@ -17,9 +17,9 @@
   "author": "Bruno Dulcetti",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dulcetti/format-masks/issues"
+    "url": "https://github.com/dulcetti/angular-format-masks/issues"
   },
-  "homepage": "https://github.com/dulcetti/format-masks#readme",
+  "homepage": "https://github.com/dulcetti/angular-format-masks#readme",
   "devDependencies": {
     "browser-sync": "^2.13.0",
     "browser-sync-spa": "^1.0.3",
