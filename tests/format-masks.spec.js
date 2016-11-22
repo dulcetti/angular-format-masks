@@ -6,7 +6,7 @@ describe('Format Masks Component', function() {
     var scope;
     var type;
     var value;
-    var maskTypes = ['cpf', 'cnpj', 'cep', 'brazilian-phone', 'date-ddmmyyyy'];
+    var maskTypes = ['cpf', 'cnpj', 'cep', 'brazilian-phone', 'date-ddmmyyyy', 'date-ddmmyy'];
 
     describe('Init component', function() {
         beforeEach(inject(function($compile, $rootScope) {
@@ -210,6 +210,33 @@ describe('Format Masks Component', function() {
         it('Result of Date mask must to be correct', function() {
             expect(controller.result).toEqual('01/01/1900');
             expect(controller.result.length).toEqual(10);
+        });
+    });
+    
+    describe('Date format dd/mm/yy', function() {
+        beforeEach(inject(function($compile, $rootScope) {
+            scope = $rootScope.$new();
+            component = angular.element('<format-masks mask-value="010183" mask-type="date-ddmmyy"></format-masks>');
+            component = $compile(component)(scope);
+            controller = component.controller('formatMasks');
+        }));
+
+        it('Component with a correct type', function() {
+            expect(controller.maskType).toEqual('date-ddmmyy');
+        });
+
+        it('Date must to be have only numbers', function() {
+            var date = controller.maskValue;
+            expect(date).toMatch('[0-9]{6}');
+        });
+        
+        it('Date must to be have 6 numbers', function() {
+            expect(controller.maskValue.length).toEqual(6);
+        });
+
+        it('Result os Date mask must to be correct', function() {
+            expect(controller.result).toEqual('01/01/83');
+            expect(controller.result.length).toEqual(8);
         });
     });
 });
