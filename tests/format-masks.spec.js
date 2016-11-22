@@ -224,5 +224,10 @@ describe('Format Masks Component', function() {
         it('Component with a correct type', function() {
             expect(controller.maskType).toEqual('date-ddmmyy');
         });
+
+        it('Date must to be have only numbers', function() {
+            var date = controller.maskValue;
+            expect(date).toMatch('[0-9]{6}');
+        });
     });
 });
