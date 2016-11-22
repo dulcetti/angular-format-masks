@@ -233,5 +233,10 @@ describe('Format Masks Component', function() {
         it('Date must to be have 6 numbers', function() {
             expect(controller.maskValue.length).toEqual(6);
         });
+
+        it('Result os Date mask must to be correct', function() {
+            expect(controller.result).toEqual('01/01/83');
+            expect(controller.result.length).toEqual(8);
+        });
     });
 });
