@@ -58,6 +58,13 @@
                         var third = value.substr(4);
                         self.result = first + '/' + second + '/' + third;
                         break;
+
+                    case 'date-ddmmyy':
+                        var first = value.substr(0, 2);
+                        var second = value.substr(2, 2);
+                        var third = value.substr(4);
+                        self.result = first + '/' + second + '/' + third;
+                        break;
                 }
             };
 
