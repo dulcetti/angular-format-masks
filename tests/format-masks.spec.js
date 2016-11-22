@@ -229,5 +229,9 @@ describe('Format Masks Component', function() {
             var date = controller.maskValue;
             expect(date).toMatch('[0-9]{6}');
         });
+        
+        it('Date must to be have 6 numbers', function() {
+            expect(controller.maskValue.length).toEqual(6);
+        });
     });
 });
