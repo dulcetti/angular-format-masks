@@ -1,5 +1,9 @@
 # format-masks
-Este é um componente Angular que serve para formatar máscaras de CPF, CNPJ, CEP, Telefones brasileiros e datas no formato dd/mm/yyyy.
+Este é um componente Angular que serve para formatar máscaras de CPF, CNPJ, CEP, Telefones brasileiros e datas nos formatos:
+
+* dd/mm/yyyy
+* mm/dd/yyyy
+* dd/mm/yy
 
 As máscaras só funcionam em inputs HTML. Esse componente serve para formatar strings que vêm de uma API e printar no HTML de forma correta.
 
@@ -44,6 +48,8 @@ Você pode adicionar as seguintes máscaras:
 * CEP
 * Telefone brasileiro
 * Data formato dd/mm/yyyy
+* Data formato mm/dd/yyyy
+* Data formato dd/mm/yy
 
 O componente possui um atributo **OBRIGATÓRIO** chamado mask-type, que você passa o tipo de máscara que você quer que o componente transforme:
 
@@ -58,6 +64,8 @@ Os tipos são:
 * cep
 * brazilian-phone
 * date-ddmmyyyy
+* date-mmddyyyy
+* date-ddmmyy
 
 ### Valores
 
@@ -74,6 +82,8 @@ Os valores só aceitam números e com seus respectivos valores máximos:
 * cep - 8 caracteres
 * brazilian-phone - 8 ou 9 caracteres
 * date-ddmmyyyy - 8 caracteres
+* date-mmddyyyy - 8 caracteres
+* date-ddmmyy - 6 caracteres
 
 Feito isso, sua string será formata com a máscara escolhida:
 
