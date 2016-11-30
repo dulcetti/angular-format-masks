@@ -1,5 +1,9 @@
 # format-masks
-This is a AngularJS Component to format masks of CPF, CNPJ, CEP, brazilian phones and date format dd/mm/yyyy.
+This is a AngularJS Component to format masks of CPF, CNPJ, CEP, brazilian phones and date formats:
+
+* dd/mm/yyyy
+* mm/dd/yyyy
+* dd/mm/yy
 
 The masks generally only work on HTML inputs. This component serve to format string of one external API and print on HTML in correct format.
 
@@ -44,6 +48,8 @@ You need add one of the follows mask types:
 * CEP
 * Brazilian Phone
 * Date format dd/mm/yyyy
+* Date format mm/dd/yyyy
+* Date format dd/mm/yy
 
 The component have a **REQUIRED** attribute calls mask-type, you pass the mask type you need the component transform on the value:
 
@@ -58,6 +64,8 @@ The types:
 * cep
 * brazilian-phone
 * date-ddmmyyyy
+* date-mmddyyyy
+* date-ddmmyy
 
 ### Values
 
@@ -74,6 +82,8 @@ The values only accepts numbers and with your respectives maxlengths:
 * cep - 8 chars
 * brazilian-phone - 8 or 9 chars
 * date-ddmmyyyy - 8 chars
+* date-mmddyyyy - 8 chars
+* date-ddmmyy - 6 chars
 
 After this, your string will format with the mask selected:
 
