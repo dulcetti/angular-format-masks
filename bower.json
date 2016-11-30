@@ -1,6 +1,6 @@
 {
   "name": "angular-format-masks",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "devDependencies": {
     "angular": "^1.5.8",
     "angular-animate": "^1.5.7",
