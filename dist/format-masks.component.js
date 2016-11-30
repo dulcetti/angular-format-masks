@@ -10,7 +10,7 @@
             var self = this;
 
             self.result = '';
-            self.types = ['cpf', 'cnpj', 'cep', 'brazilian-phone', 'date-ddmmyyyy', 'date-ddmmyy'];
+            self.types = ['cpf', 'cnpj', 'cep', 'brazilian-phone', 'date-ddmmyyyy', 'date-ddmmyy', 'date-mmddyyyy'];
 
             if(self.types.indexOf(self.maskType) == -1) {
                 console.error('Invalid type');
@@ -60,6 +60,13 @@
                         break;
 
                     case 'date-ddmmyy':
+                        var first = value.substr(0, 2);
+                        var second = value.substr(2, 2);
+                        var third = value.substr(4);
+                        self.result = first + '/' + second + '/' + third;
+                        break;
+
+                    case 'date-mmddyyyy':
                         var first = value.substr(0, 2);
                         var second = value.substr(2, 2);
                         var third = value.substr(4);
