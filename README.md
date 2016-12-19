@@ -12,7 +12,7 @@ The masks generally only work on HTML inputs. This component serve to format str
 Run the `npm install` command to execute the package instalation:
 
 ```
-npm install format-masks
+npm install format-masks --save-dev
 ```
 
 After this, the component will installed on folder node_modules/
