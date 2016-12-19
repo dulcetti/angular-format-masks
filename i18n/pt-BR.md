@@ -12,7 +12,7 @@ As máscaras só funcionam em inputs HTML. Esse componente serve para formatar s
 Rode o comando npm install para executar a instalação do pacote:
 
 ```
-npm install format-masks
+npm install format-masks --save-dev
 ```
 
 Feito isso o componente ficará instalado no diretório node_modules/
