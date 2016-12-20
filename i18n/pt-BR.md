@@ -12,7 +12,7 @@ As máscaras só funcionam em inputs HTML. Esse componente serve para formatar s
 Rode o comando npm install para executar a instalação do pacote:
 
 ```
-npm install format-masks
+npm install format-masks --save-dev
 ```
 
 Feito isso o componente ficará instalado no diretório node_modules/
@@ -22,7 +22,7 @@ Feito isso o componente ficará instalado no diretório node_modules/
 Agora você precisa colocar o JS responsável por chamar o componente:
 
 ```html
-<script src="/node_modules/format-masks/dist/format-masks.component.js"></script>
+<script src="/node_modules/angular-format-masks/dist/angular-format-masks.component.js"></script>
 ```
 
 Agora adicione o componente no módulo Angular do seu projeto:

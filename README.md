@@ -12,7 +12,7 @@ The masks generally only work on HTML inputs. This component serve to format str
 Run the `npm install` command to execute the package instalation:
 
 ```
-npm install format-masks
+npm install format-masks --save-dev
 ```
 
 After this, the component will installed on folder node_modules/
@@ -22,7 +22,7 @@ After this, the component will installed on folder node_modules/
 Now you need put the JS file responsible to call the component:
 
 ```html
-<script src="/node_modules/format-masks/dist/format-masks.component.js"></script>
+<script src="/node_modules/angular-format-masks/dist/angular-format-masks.component.js"></script>
 ```
 
 Add the component at AngularJS module of your project:
