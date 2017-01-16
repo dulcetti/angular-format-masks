@@ -12,10 +12,6 @@
             self.result = '';
             self.types = ['cpf', 'cnpj', 'cep', 'brazilian-phone', 'date-ddmmyyyy', 'date-ddmmyy', 'date-mmddyyyy'];
 
-            if(self.types.indexOf(self.maskType) == -1) {
-                console.error('Invalid type');
-            }
-
             function formatResult(type, value) {
                 switch (type) {
                     case 'cpf':
@@ -75,7 +71,13 @@
                 }
             };
 
-            formatResult(self.maskType, self.maskValue);
+            self.$onInit = function() {
+                if(self.types.indexOf(self.maskType) == -1) {
+                    console.error('Invalid type');
+                }
+
+                formatResult(self.maskType, self.maskValue);
+            };
         };
 
         return {
