@@ -265,6 +265,5 @@ describe('Format Masks Component', function() {
             expect(controller.result).toEqual('12/01/1987');
             expect(controller.result.length).toEqual(10);
         });
-            
     });
 });
